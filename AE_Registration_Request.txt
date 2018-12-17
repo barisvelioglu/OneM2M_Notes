@@ -1,0 +1,125 @@
+-----------------------
+AE Registration Request
+-----------------------
+
+API/AE/CRE/001
+API/AE/CRE/001_RCN0
+API/AE/CRE/001_RCN1
+API/AE/CRE/001_RCN2
+API/AE/CRE/001_RCN3
+
+-----------------------
+
+HTTP Request:
+
+POST /mn-name?rcn=0 HTTP/1.1
+Host: 192.168.0.10:8282
+X-M2M-Origin: C
+Content-Type: application/json;ty=2
+X-M2M-RI: 1234
+
+{
+	"m2m:ae": {
+		"api": "A01.com.company.Temperature",
+		"lbl": ["indoor_temperature", "room_1"],
+		"rr": false ,
+		"rn": "ae_sensor"
+	}
+}
+
+----------------------
+RCN=0
+----------------------
+
+201 Created
+Content-Length:0 
+Content-Location:/mnID/CAE0120180404T0830181405122857960960_cse01
+X-M2M-RI:1234
+X-M2M-RSC:2001
+
+----------------------
+RCN=1
+----------------------
+
+201 Created
+Content-Length:310 
+Content-Location:/mnID/CAE0120180404T0833201405122522252800_cse01
+Content-Type:application/json
+X-M2M-RI:1234
+X-M2M-RSC:2001
+
+{
+    "m2m:ae": {
+        "aei": "CAE0120180404T0833201405122522252800_cse01",
+        "api": "A01.com.company.Temperature",
+        "ct": "20180404T083320",
+        "et": "99991231T235959",
+        "lbl": [
+            "indoor_temperature",
+            "room_1"
+        ],
+        "lt": "20180404T083320",
+        "pi": "mnID",
+        "ri": "CAE0120180404T0833201405122522252800_cse01",
+        "rn": "ae_sensor",
+        "rr": false,
+        "ty": 2
+    }
+}
+
+----------------------
+RCN=2
+----------------------
+
+201 Created
+Content-Length:40  
+Content-Location:/mnID/CAE0120180404T0833201405122522252800_cse01
+Content-Type:application/json
+X-M2M-RI:1234
+X-M2M-RSC:2001
+
+{
+	"m2m:ae": {
+		"api": "A01.com.company.Temperature",
+		"lbl": ["indoor_temperature", "room_1"],
+		"rr": false ,
+		"rn": "ae_sensor"
+	}
+}
+
+----------------------
+RCN=3
+----------------------
+
+201 Created
+Content-Length:355 
+Content-Location:/mnID/CAE0120180404T0838301405122186544640_cse01
+Content-Type:application/json
+X-M2M-RI:1234
+X-M2M-RSC:2001
+
+{
+    "m2m:rce": {
+        "m2m:ae": {
+            "aei": "CAE0120180404T0838301405122186544640_cse01",
+            "api": "A01.com.company.Temperature",
+            "ct": "20180404T083830",
+            "et": "99991231T235959",
+            "lbl": [
+                "indoor_temperature",
+                "room_1"
+            ],
+            "lt": "20180404T083830",
+            "pi": "mnID",
+            "ri": "CAE0120180404T0838301405122186544640_cse01",
+            "rn": "ae_sensor",
+            "rr": false,
+            "ty": 2
+        },
+        "uri": "mn-name/ae_sensor"
+    }
+}
+
+
+
+

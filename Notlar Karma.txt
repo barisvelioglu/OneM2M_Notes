@@ -1,0 +1,16 @@
+    GET /~/mn-cse/home_gateway?fu=1&rty=3&drt=2 HTTP/1.1
+
+	fu -> filterUsage 1(Discovery) 0(Retrive only one)
+	rty -> resource type
+	drt -> discovery result type 
+		
+        Structured = 1,
+        Unstructured = 2,
+	
+	
+	TS-0009-HTTP-Protocol-Binding.pdf
+	
+	Page 10  oneM2M request parameters mapped as query-string field
+	
+	infrastructure domain: consists of Application Infrastructure and M2M Service Infrastructure
+	infrastructure node: is a Node that contains one Common Services Entity and contains zero or more Application Entities
